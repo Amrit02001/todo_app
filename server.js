@@ -13,7 +13,7 @@ const todoSchema = mongoose.Schema({
 const Todos = mongoose.model('Todos', todoSchema);
 
 
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, './frontend')));
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
@@ -22,7 +22,7 @@ app.get('/', (req, res)=>{
     // res.json({
     //     message:"checking"
     // })
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    res.sendFile(path.join(__dirname, './frontend/index.html'));
 })   
 
 // To get all data 
